@@ -1,3 +1,3 @@
-# DSCI 532 Dashboard Project
+# Vancouver Housing
 
-This repository contains a data dashboard project following DSCI 522/524 best practices. It includes raw data documentation, exploratory notebooks, proposal materials, and a dashboard application scaffold. The goal is to build a reproducible workflow for data wrangling, visualization, and communication. This project will evolve through milestones with clear documentation and version control.
+This repository contains a data dashboard project that enables investigation of California housing data from 1990. At present, we include the raw dataset from Kaggle, initial exploratory data analysis, and an overall proposal for the dashboard. We intend to include visualizations such as an interactive map to investigate house prices and features by location, as well as both scatter plots to investigate house prices by the age of the house, median income of the households on the same block, proximity to the ocean, and bar plots to investigate house prices by number of bedrooms, number of total rooms, the number of households on the block etc. 
