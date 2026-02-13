@@ -244,25 +244,23 @@ def correlation_heatmap(df: pd.DataFrame) -> alt.Chart:
     )
 
 
-def ocean_proximity_bar(df: pd.DataFrame) -> alt.Chart:
+def ocean_proximity_boxplot(df: pd.DataFrame) -> alt.Chart:
     """
-    Bar chart of median house value by ocean_proximity.
+    Box plot of median house value by ocean_proximity.
     """
     col = "ocean_proximity"
     if col not in df.columns or "median_house_value" not in df.columns:
-        return alt.Chart(pd.DataFrame()).mark_bar().properties(width=CHART_WIDTH, height=CHART_HEIGHT)
-    agg = df.groupby(col, observed=True)["median_house_value"].median().reset_index()
-    agg = agg.sort_values("median_house_value", ascending=False)
+        return alt.Chart(pd.DataFrame()).mark_boxplot().properties(width=CHART_WIDTH, height=CHART_HEIGHT)
+    data = df[[col, "median_house_value"]].dropna()
+    if data.empty:
+        return alt.Chart(pd.DataFrame()).mark_boxplot().properties(width=CHART_WIDTH, height=CHART_HEIGHT)
     return (
-        alt.Chart(agg)
-        .mark_bar()
+        alt.Chart(data)
+        .mark_boxplot(extent="min-max")
         .encode(
-            alt.X("ocean_proximity:N", title="Ocean proximity", sort="-y"),
-            alt.Y("median_house_value:Q", title="Median house value ($)"),
-            alt.Color(
-                "ocean_proximity:N",
-                legend=alt.Legend(title="Ocean proximity", orient="right"),
-            ),
+            alt.X(f"{col}:N", title="Ocean proximity"),
+            alt.Y("median_house_value:Q", title="Median house value ($)", scale=alt.Scale(zero=False)),
+            alt.Color(f"{col}:N", legend=alt.Legend(title="Ocean proximity", orient="right")),
         )
         .properties(width=CHART_WIDTH, height=CHART_HEIGHT, title="Median house value by ocean proximity")
     )

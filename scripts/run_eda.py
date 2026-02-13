@@ -23,7 +23,7 @@ from src.eda_code import (
     target_distribution,
     scatter_matrix_like,
     correlation_heatmap,
-    ocean_proximity_bar,
+    ocean_proximity_boxplot,
     geo_value_scatter,
     geo_value_binned_mean,
     geo_value_extremes,
@@ -75,7 +75,7 @@ def main() -> None:
     save_chart(target_distribution(df), OUTPUT_DIR / "target_distribution.png")
     save_chart(scatter_matrix_like(df, cols=["median_income", "housing_median_age", "latitude", "longitude"]), OUTPUT_DIR / "scatter_matrix.png")
     save_chart(correlation_heatmap(df), OUTPUT_DIR / "correlation_heatmap.png")
-    save_chart(ocean_proximity_bar(df), OUTPUT_DIR / "ocean_proximity_bar.png")
+    save_chart(ocean_proximity_boxplot(df), OUTPUT_DIR / "ocean_proximity_boxplot.png")
     save_chart(geo_value_scatter(df), OUTPUT_DIR / "geo_value_scatter.png")
     save_chart(geo_value_binned_mean(df, bin_size=0.25), OUTPUT_DIR / "geo_value_binned.png")
     save_chart(geo_value_extremes(df), OUTPUT_DIR / "geo_value_extremes.png")
@@ -132,7 +132,7 @@ Run `python scripts/run_eda.py` to regenerate outputs.
 
 {ocean_counts_md}
 
-![Value by ocean proximity](eda_outputs/ocean_proximity_bar.png)
+![Value by ocean proximity](eda_outputs/ocean_proximity_boxplot.png)
 
 - Coastal and bay-adjacent blocks tend to have higher median values.
 
