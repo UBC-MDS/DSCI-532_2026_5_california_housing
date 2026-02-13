@@ -37,38 +37,22 @@ By interactively exploring these variables, Dr. Ramirez can better understand th
 
 ## Section 4: Exploratory Data Analysis
 
-In this section, we will perform an exploratory data analysis on the California housing data. We will use the data to answer the research questions related to user story 3.[^1]
-
-[^1]: The code used to generate the plots in this report was produced with the assistance of a LLM and has been modified as needed for our specific use case.
-
-The dataset contains nine numeric variables (geography, structure, demographics) and one key categorical variable, `ocean_proximity`, which enables analysis of waterfront versus inland markets.
-
-![Numeric histograms](eda_outputs/histograms_numeric.png)
-
-![Correlation heatmap](eda_outputs/correlation_heatmap.png)
-
-![Scatter matrix](eda_outputs/scatter_matrix.png)
-
-The plots above show that California’s highest house values concentrate along the coast and in major metro areas, while inland regions tend to have much lower values. Spatial aggregation and value extremes highlight the strong coastal premium and regional disparities, underscoring geography as a key driver of property prices.
-
-The bar chart below shows median house values categorized by ocean proximity. Coastal neighborhoods generally command higher prices, highlighting the premium for ocean access.
-
-![Value by ocean proximity](eda_outputs/ocean_proximity_boxplot.png)
+We perform an exploratory data analysis on the California housing data. We will use the data to answer the research questions related to user story 3.
 
 ### Spatial Distribution and Clusters (Urban Economics Focus)
 
 Geographic visualization is central to understanding California’s housing landscape. As an urban economics researcher, identifying where high- and low-value blocks concentrate—and how those clusters align with income, coast, and infrastructure—is essential for evaluating investment opportunities and regional price gradients.
 
-![Geographic scatter](eda_outputs/geo_value_scatter.png)
+<p align="center">
+  <img src="eda_outputs/geo_value_scatter.png" alt="Geographic scatter" width="70%">
+</p>
 
 Higher house values cluster along the coast; inland regions show lower prices. Users can interactively explore regions and value patterns.
 
-![Spatial aggregation](eda_outputs/geo_value_binned.png)
+<p align="center">
+  <img src="eda_outputs/geo_value_binned.png" alt="Spatial aggregation" width="70%">
+</p>
 
 Binning blocks into a heatmap highlights coastal and metro areas as high-value regions, with lower values inland.
-
-![Value extremes](eda_outputs/geo_value_extremes.png)
-
-The top 10% of house values cluster along the coast, while the lowest are inland.
 
 

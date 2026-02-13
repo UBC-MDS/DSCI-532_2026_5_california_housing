@@ -382,6 +382,8 @@ def geo_value_binned_mean(
             alt.Y("lat_bin:Q", title="Latitude", scale=alt.Scale(domain=[lat_min, lat_max])),
             alt.Y2("lat_end:Q"),
             alt.Color(f"{value_col}:Q", scale=alt.Scale(scheme="viridis"), legend=alt.Legend(title=f"Mean {value_col} ($)")),
+            alt.Tooltip(["lon_bin", "lat_bin", value_col]),
         )
         .properties(width=CHART_WIDTH, height=CHART_HEIGHT, title="Spatial aggregation: mean value by grid")
+        .interactive()
     )
