@@ -34,3 +34,12 @@ By interactively exploring these variables, Dr. Ramirez can better understand th
 **User story 2:** As an urban economics researcher, I want to compare median house values across ocean proximity categories in order to assess whether coastal access was associated with higher property values in 1990.
 
 **User story 3:** As an urban economics researcher, I want to visualize the geographic distribution of house values across California to identify spatial clusters of high and low value regions.
+
+
+
+
+## Section 5: App Sketch and Description
+
+![Dashboard](sketch.png "App Sketch")
+
+The app contains a landing page that shows the distribution of median house values by different factors (eg. median income, ocean proximity, latitude and longitude, number of rooms, etc.). The landing page has an interactive map of California that displays the location of each data point, colored by median house value. The user can zoom in and out on the map, select different areas with a brush, and filter the displayed data points using the global drop down menu. They can also control what data is displayed by the sidebar controls, which allow selection of housing values, income, age, number of rooms, latitude, longitude, etc. The landing page also contains a density plot, with a drop down menu to select the desired continuous variable (eg. housing value, income, etc.) to display the selected dataset's distribution compared to the overall state's distribution. There is also a comparison scatterplot, which allows the user to select which variable (eg. median income), they want to compare to median housing values. There is a boxplot which displays the housing values by proximity category. Finally, there are summary metrics on top, which display the median housing value and median income value of the selected subset of data. 
