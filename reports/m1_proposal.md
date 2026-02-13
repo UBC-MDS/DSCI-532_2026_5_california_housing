@@ -37,7 +37,9 @@ By interactively exploring these variables, Dr. Ramirez can better understand th
 
 ## Section 4: Exploratory Data Analysis
 
-In this section, we will perform an exploratory data analysis on the California housing data. We will use the data to answer the research questions related to user story 3.
+In this section, we will perform an exploratory data analysis on the California housing data. We will use the data to answer the research questions related to user story 3.[^1]
+
+[^1]: The code used to generate the plots in this report was produced with the assistance of a LLM and has been modified as needed for our specific use case.
 
 The dataset contains nine numeric variables (geography, structure, demographics) and one key categorical variable, `ocean_proximity`, which enables analysis of waterfront versus inland markets.
 
