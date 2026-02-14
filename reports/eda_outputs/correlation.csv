@@ -1,9 +1,0 @@
-column,correlation
-median_income,0.6881
-latitude,-0.1442
-total_rooms,0.1342
-housing_median_age,0.1056
-households,0.0658
-total_bedrooms,0.0497
-longitude,-0.046
-population,-0.0246

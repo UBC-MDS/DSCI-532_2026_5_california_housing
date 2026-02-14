@@ -44,13 +44,13 @@ We perform an exploratory data analysis on the California housing data. We will 
 Geographic visualization is central to understanding California’s housing landscape. As an urban economics researcher, identifying where high- and low-value blocks concentrate—and how those clusters align with income, coast, and infrastructure—is essential for evaluating investment opportunities and regional price gradients.
 
 <p align="center">
-  <img src="eda_outputs/geo_value_scatter.png" alt="Geographic scatter" width="70%">
+  <img src="../notebooks/eda_plots/geo_value_scatter.png" alt="Geographic scatter" width="70%">
 </p>
 
 Higher house values cluster along the coast; inland regions show lower prices. Users can interactively explore regions and value patterns.
 
 <p align="center">
-  <img src="eda_outputs/geo_value_binned.png" alt="Spatial aggregation" width="70%">
+  <img src="../notebooks/eda_plots/geo_value_binned.png" alt="Spatial aggregation" width="70%">
 </p>
 
 Binning blocks into a heatmap highlights coastal and metro areas as high-value regions, with lower values inland.
