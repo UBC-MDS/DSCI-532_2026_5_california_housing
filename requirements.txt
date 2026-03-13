@@ -12,3 +12,5 @@ querychat==0.5.1
 chatlas==0.15.2
 python-dotenv==1.0.1
 folium==0.19.6
+pyarrow>=14.0.0
+duckdb>=1.0.0

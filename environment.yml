@@ -21,6 +21,8 @@ dependencies:
   - anywidget
   - pip
 
+  - pyarrow
+  - duckdb
   - pip:
       - querychat==0.5.1
       - chatlas==0.15.2
