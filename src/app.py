@@ -13,7 +13,7 @@ from pathlib import Path
 
 import folium
 
-from utils import apply_filters
+from src.utils import apply_filters
 from folium.plugins import MarkerCluster
 
 load_dotenv(Path(__file__).parent / ".env")
